@@ -28,7 +28,7 @@ Install the dependencies
 npm install && npm install -D
 ```
 
-At the root folder, add a .env file including the following line and replate the <mongodb-atlas-url> by your MongoDB Atlas URL
+At the root folder, add a .env file including the following line and replace the <mongodb-atlas-url> by your MongoDB Atlas URL
 
 ```
 MONOGODB=<mongodb-atlas-url>
