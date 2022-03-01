@@ -4,7 +4,8 @@ This is the backend server of our CS4296 Group Project. It provides an API for c
 
 # Prerequisit
 
-You need node and npm for this project. If you don't have node, visit [Node.js Official Website](https://www.nodejs.org)
+You need node and npm for this project. If you don't have node, visit [Node.js Official Website](https://www.nodejs.org).
+
 You also need a MongoDB Atlas account for storing data in the database. If you don't have one, visit [MongoDB](https://www.mongodb.com)
 
 # Quick Installation
