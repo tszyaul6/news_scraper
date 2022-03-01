@@ -1,6 +1,6 @@
 # Introduction
 
-This is the backend server of our CS4206 Group Project. It provides an API for connecting the database and serving the translated news data and articles to the frontend server.
+This is the backend server of our CS4296 Group Project. It provides an API for connecting the database and serving the translated news data and articles to the frontend server.
 
 # Prerequisit
 
