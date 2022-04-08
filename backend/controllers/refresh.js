@@ -19,14 +19,14 @@ const scrap_now = async () => {
 			const { translated_title, translated_before, link } =
 				this_translated_news_info;
 
-			const newsInfo = new NewsInfo({
+			const allNewsInfo = new NewsInfo({
 				title: translated_title,
 				source: "std",
 				before: translated_before,
 				link
 			});
 
-			await newsInfo.save();
+			await allNewsInfo.save();
 		}
 	}
 
@@ -53,12 +53,12 @@ const refresh = async (req, res) => {
 
 				return res.status(200).json({
 					message: "Successfully clear the db and scrap the news",
-					newsInfo: result
+					allNewsInfo: result
 				});
 			} else {
 				return res.status(200).json({
 					message: "Successfully load the news from database",
-					newsInfo: cached
+					allNewsInfo: cached
 				});
 			}
 		} else {
@@ -66,7 +66,7 @@ const refresh = async (req, res) => {
 
 			return res.status(200).json({
 				message: "First time initiate the database",
-				newsInfo: result
+				allNewsInfo: result
 			});
 		}
 	} catch (error) {
