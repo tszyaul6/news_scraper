@@ -20,6 +20,41 @@ sudo ./news_scraper/setup.sh
 
 It might need a few minutes to complete the whole installation.
 
+After the above is finished, installed the dependencies for frontend and backend.
+
+## Backend
+
+```
+cd /home/ubuntu/news_scraper/frontend
+
+```
+
+```
+npm install
+```
+
+```
+echo "REACT_APP_BACKEND_API=/api" > .env
+```
+
+```
+npm run build
+```
+
+## Frontend
+
+```
+cd /home/ubuntu/news_scraper/backend
+```
+
+```
+npm install && npm install -D
+```
+
+```
+echo "MONOGODB=<mongodb-atlas-url>" > .env
+```
+
 # Environment Variables
 
 Before running the application, there are two variables needed.

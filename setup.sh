@@ -5,18 +5,6 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 # install node 16
 sudo apt install -y nodejs
 
-# install dependency for frontend application
-cd /home/ubuntu/news_scraper/frontend
-npm install && npm install -D
-echo "REACT_APP_BACKEND_API=/api" > .env
-npm run build
-
-# install dependency for backend application
-cd /home/ubuntu/news_scraper/backend
-npm install && npm install -D
-echo "MONOGODB=<mongodb-atlas-url>" > .env
-
-
 # install nginx
 sudo apt-get install -y nginx
 
