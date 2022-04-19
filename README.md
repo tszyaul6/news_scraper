@@ -22,20 +22,56 @@ Change directory to the folder
 cd news_scraper
 ```
 
-Install the dependencies
+## Backend Installation
+
+Install the dependencies for backend
 
 ```
+cd backend
 npm install && npm install -D
 ```
 
-At the root folder, add a .env file including the following line and replace the mongodb-atlas-url by your MongoDB Atlas URL
+## Frontend Installation
+
+Install the dependencies for frontend:
 
 ```
-MONOGODB=<mongodb-atlas-url>
+cd frontend
+npm install && npm install -D
 ```
 
-Finally, start the program
+# Environment Variables
+
+## Backend .env
+
+Make a .env file with the following line:
 
 ```
-npm start
+cd backend
+echo "MONOGODB=<mongodb-atlas-url>" > .env
+```
+
+where mongodb-atlas-url is provided by MongoDB Atlas
+
+## Frontend .env
+
+Make a .env file with the following line:
+
+```
+cd frontend
+echo "REACT_APP_BACKEND_API=/api"
+```
+
+# Run the server
+
+Finally, start the program by:
+
+```
+cd backend && npm start
+```
+
+or
+
+```
+cd frontend && npm start
 ```
