@@ -8,6 +8,14 @@ Use the setup.sh provided by this repository.
 
 # Backend settings
 
+## React app setup
+
+Build the application
+
+```
+cd backend && npm run build
+```
+
 ## Nginx Setup
 
 Goto the following directory
@@ -23,20 +31,18 @@ server {
   listen 80 default_server;
   server_name _;
 
-  # react application
+  # react app & front-end files
   location / {
-    root <path-to-built-react-app>;
+    root /home/ubuntu/news_scraper/frontend/build;
     try_files $uri /index.html;
   }
 
-  # backend server
+  # node api reverse proxy
   location /api {
-    proxy_pass <api-path>;
+    proxy_pass http://<private-ipv4-address>:8000/news;
   }
 }
 ```
-
-In this case our path-to-built-react-app should be "/news_scraper/frontend/build", and our api-path should be "http://localhost:8000/news"
 
 ## PM2 Commnads
 
