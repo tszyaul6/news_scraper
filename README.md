@@ -26,7 +26,6 @@ After the above is finished, installed the dependencies for frontend and backend
 
 ```
 cd /home/ubuntu/news_scraper/frontend
-
 ```
 
 ```
