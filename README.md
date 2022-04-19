@@ -59,7 +59,7 @@ Make a .env file with the following line:
 
 ```
 cd frontend
-echo "REACT_APP_BACKEND_API=/api"
+echo "REACT_APP_BACKEND_API=/api" > .env
 ```
 
 # Run the server
