@@ -1,77 +1,56 @@
 # Introduction
 
-This is the backend server of our CS4296 Group Project. It provides an API for connecting the database and serving the translated news data and articles to the frontend server.
-
-# Prerequisit
-
-You need node and npm for this project. If you don't have node, visit [Node.js Official Website](https://www.nodejs.org)
-
-You also need a MongoDB Atlas account for storing data in the database. If you don't have one, visit [MongoDB](https://www.mongodb.com)
+This is our CS4296 Group Project. It is a web application that provides Hong Kong news translation services. This application is built using MERN stack and can be deployed on AWS EC2 free tier instances.
 
 # Quick Installation
 
-Clone this repository to your local machine
+This installation guide is for newly created EC2 instances.
+
+Clone this repository
 
 ```
 git clone https://github.com/tszyaul6/news_scraper.git
 ```
 
-Change directory to the folder
+Run this shell script
 
 ```
-cd news_scraper
+sudo ./news_scraper/setup.sh
 ```
 
-## Backend Installation
-
-Install the dependencies for backend
-
-```
-cd backend
-npm install && npm install -D
-```
-
-## Frontend Installation
-
-Install the dependencies for frontend:
-
-```
-cd frontend
-npm install && npm install -D
-```
+It might need a few minutes to complete the whole installation.
 
 # Environment Variables
 
-## Backend .env
+Before running the application, there are two variables needed.
+We are using vim as the editor in the following examples.
+Feel free to use other editors like nano instead.
 
-Make a .env file with the following line:
+## MongoDB Atlas URL
 
-```
-cd backend
-echo "MONOGODB=<mongodb-atlas-url>" > .env
-```
-
-where mongodb-atlas-url is provided by MongoDB Atlas
-
-## Frontend .env
-
-Make a .env file with the following line:
+Modify the following file by
 
 ```
-cd frontend
-echo "REACT_APP_BACKEND_API=/api" > .env
+sudo vim /home/ubuntu/news_scraper/backend/.env
 ```
 
-# Run the server
+Change <mongodb-atlas-url> to your MongoDB Atlas URL.
 
-Finally, start the program by:
+## Backend Server IP Address
 
-```
-cd backend && npm start
-```
-
-or
+Modify the following file by
 
 ```
-cd frontend && npm start
+sudo vim /etc/nginx/sites-available/default
+```
+
+Change the <private-ipv4-address> to your private IPv4 address of this intance from AWS console.
+
+# Start the server
+
+Start the server by PM2
+
+```
+cd /home/ubuntu/news_scraper/backend
+sudo pm2 start ecosystem.config.js
 ```
