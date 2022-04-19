@@ -81,7 +81,7 @@ sudo vim /etc/nginx/sites-available/default
 Change the \<private-ipv4-address\> to your private IPv4 address of this intance from AWS console, then
 
 ```
-sudo nano /etc/nginx/sites-available/default
+sudo systemctl restart nginx
 ```
 
 # Start the server
