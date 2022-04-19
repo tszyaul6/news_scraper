@@ -22,7 +22,7 @@ It might need a few minutes to complete the whole installation.
 
 After the above is finished, installed the dependencies for frontend and backend.
 
-## Backend
+## Frontend
 
 Goto the following directory
 
@@ -48,7 +48,7 @@ Build the react application
 npm run build
 ```
 
-## Frontend
+## Backend
 
 Goto the following directory
 
