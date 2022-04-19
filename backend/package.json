@@ -16,7 +16,7 @@
 		"cors": "^2.8.5",
 		"express": "^4.17.3",
 		"mongoose": "^6.2.3",
-		"puppeteer": "^13.4.0"
+		"puppeteer": "^13.5.2"
 	},
 	"devDependencies": {
 		"dotenv": "^16.0.0",

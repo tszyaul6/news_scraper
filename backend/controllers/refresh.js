@@ -70,6 +70,7 @@ const refresh = async (req, res) => {
 			});
 		}
 	} catch (error) {
+		console.log(error);
 		return res.status(502).json({
 			message: "Server Error",
 			error: error

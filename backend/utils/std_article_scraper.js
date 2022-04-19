@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 
 const std_article_scraper = async (link) => {
 	// Launch browser and direct to the website
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
 	const page = await browser.newPage();
 	await page.goto(link);
 
