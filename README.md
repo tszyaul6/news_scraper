@@ -34,7 +34,7 @@ Modify the following file by
 sudo vim /home/ubuntu/news_scraper/backend/.env
 ```
 
-Change <mongodb-atlas-url> to your MongoDB Atlas URL.
+Change \<mongodb-atlas-url\> to your MongoDB Atlas URL.
 
 ## Backend Server IP Address
 
@@ -44,7 +44,7 @@ Modify the following file by
 sudo vim /etc/nginx/sites-available/default
 ```
 
-Change the <private-ipv4-address> to your private IPv4 address of this intance from AWS console.
+Change the \<private-ipv4-address\> to your private IPv4 address of this intance from AWS console.
 
 # Start the server
 
