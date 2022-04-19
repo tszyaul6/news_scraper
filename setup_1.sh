@@ -6,7 +6,7 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install -y nodejs
 
 # install pm2
-sudo npm install -g pm2
+# sudo npm install -g pm2
 
 # setup pm2 to start automatically on system startup
 # sudo pm2 startup systemd
