@@ -18,13 +18,13 @@ sudo apt-get install -y nginx
 sudo apt install chromium-browser
 
 # install dependency for frontend application
-cd ~/news_scraper/frontend
+cd /home/ubuntu/news_scraper/frontend
 npm install && npm install -D
 echo "REACT_APP_BACKEND_API=/api" > .env
 npm run build
 
 # install dependency for backend application
-cd ~/news_scraper/backend
+cd /home/ubuntu/news_scraper/backend
 npm install && npm install -D
 echo "MONOGODB=<mongodb-atlas-url>" > .env
 
