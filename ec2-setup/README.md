@@ -6,6 +6,10 @@ This is the instructions for properly setting up the EC2 instance.
 
 Use the setup.sh provided by this repository.
 
+```
+sudo ./setup.sh
+```
+
 # Backend settings
 
 ## React app setup
