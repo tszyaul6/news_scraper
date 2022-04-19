@@ -1,8 +1,8 @@
-# Introduction
+# 📚 Introduction
 
 This is our CS4296 Group Project. It is a web application that provides Hong Kong news translation services. This application is built using MERN stack and can be deployed on AWS EC2 free tier instances.
 
-# Quick Installation
+# 🛠 Quick Installation
 
 This installation guide is for newly created EC2 instances.
 
@@ -68,7 +68,7 @@ Create .env file with the following
 echo "MONOGODB=<mongodb-atlas-url>" > .env
 ```
 
-# Changing Variables
+# ✍🏻 Changing Variables
 
 Before running the application, there are two variables needed to change.
 We are using vim as the editor in the following examples.
@@ -98,7 +98,7 @@ Change the \<private-ipv4-address\> to your private IPv4 address of this intance
 sudo systemctl restart nginx
 ```
 
-# Start the server
+# 🌈 Start the server
 
 Start the server by PM2
 
