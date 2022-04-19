@@ -1,3 +1,10 @@
+# create apt source for node 16
+sudo apt update -y
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
+
+# install node 16
+sudo apt install -y nodejs
+
 # install dependency for frontend application
 cd /home/ubuntu/news_scraper/frontend
 npm install && npm install -D
@@ -8,6 +15,10 @@ npm run build
 cd /home/ubuntu/news_scraper/backend
 npm install && npm install -D
 echo "MONOGODB=<mongodb-atlas-url>" > .env
+
+
+# install nginx
+sudo apt-get install -y nginx
 
 # replace default nginx file
 cd /etc/nginx/sites-available
@@ -20,7 +31,7 @@ server {
   # react app & front-end files
   location / {
     root /home/ubuntu/news_scraper/frontend/build;
-    try_files $uri /index.html;
+    try_files \$uri /index.html;
   }
 
   # node api reverse proxy
@@ -29,3 +40,13 @@ server {
   }
 }
 END
+
+
+# install chromium
+sudo apt install chromium-browser
+
+# install pm2
+sudo npm install -g pm2
+
+# setup pm2 to start automatically on system startup
+sudo pm2 startup systemd
