@@ -47,7 +47,7 @@ cd /home/ubuntu/news_scraper/backend
 ```
 
 ```
-npm install && npm install -D
+npm install
 ```
 
 ```
