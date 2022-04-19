@@ -3,6 +3,8 @@ const cheerio = require("cheerio");
 
 // Scrap all STD news info including title, before and link in Chinese
 const std_info_scraper = async () => {
+	console.log(`Start scrapping all news info`);
+
 	// Launch browser and direct to the website
 	const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
 	const page = await browser.newPage();
@@ -13,6 +15,8 @@ const std_info_scraper = async () => {
 
 	// Close browser
 	await browser.close();
+
+	console.log(`Finished scrapping all news info`);
 
 	// Let cheerio to handle the html
 	let $ = await cheerio.load(body);

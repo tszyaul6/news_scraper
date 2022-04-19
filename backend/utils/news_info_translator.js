@@ -16,6 +16,7 @@ const before_translator = (before) => {
 // Pass the news array and language needed to the function
 // Return a translated news array
 const news_info_translator = async (all_news, lang) => {
+	console.log(`Start translating all news info`);
 	let all_translated_news = [];
 
 	for (const { title, before, link } of all_news) {
@@ -30,6 +31,8 @@ const news_info_translator = async (all_news, lang) => {
 
 		all_translated_news.push(this_translated_news);
 	}
+
+	console.log(`Finished translating all news info`);
 
 	return all_translated_news;
 };

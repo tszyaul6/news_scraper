@@ -4,8 +4,6 @@ const news_article_translator = require("../utils/news_article_translator");
 const std_article_scraper = require("../utils/std_article_scraper");
 
 const getArticle = async (req, res) => {
-	console.log(`get article is running...`);
-
 	try {
 		const { article: article_id, link } = await NewsInfo.findById(
 			req.params.id

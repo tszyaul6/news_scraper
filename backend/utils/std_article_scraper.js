@@ -2,6 +2,8 @@ const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
 
 const std_article_scraper = async (link) => {
+	console.log(`Start scrapping article from ${link}`);
+	
 	// Launch browser and direct to the website
 	const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
 	const page = await browser.newPage();
@@ -12,6 +14,8 @@ const std_article_scraper = async (link) => {
 
 	// Close browser
 	await browser.close();
+
+	console.log(`Finished scrapping article`);
 
 	// Let cheerio to handle the html
 	let $ = await cheerio.load(body);
