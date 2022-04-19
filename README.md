@@ -102,7 +102,12 @@ sudo systemctl restart nginx
 
 Start the server by PM2
 
+Goto the following directory
 ```
 cd /home/ubuntu/news_scraper/backend
+```
+
+Start the server by using PM2
+```
 sudo pm2 start ecosystem.config.js
 ```
