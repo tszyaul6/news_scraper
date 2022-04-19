@@ -24,17 +24,25 @@ After the above is finished, installed the dependencies for frontend and backend
 
 ## Backend
 
+Goto the following directory
+
 ```
 cd /home/ubuntu/news_scraper/frontend
 ```
+
+Install the dependencies
 
 ```
 npm install
 ```
 
+Create .env file with the following
+
 ```
 echo "REACT_APP_BACKEND_API=/api" > .env
 ```
+
+Build the react application
 
 ```
 npm run build
@@ -42,21 +50,27 @@ npm run build
 
 ## Frontend
 
+Goto the following directory
+
 ```
 cd /home/ubuntu/news_scraper/backend
 ```
+
+Install the dependencies
 
 ```
 npm install
 ```
 
+Create .env file with the following
+
 ```
 echo "MONOGODB=<mongodb-atlas-url>" > .env
 ```
 
-# Environment Variables
+# Changing Variables
 
-Before running the application, there are two variables needed.
+Before running the application, there are two variables needed to change.
 We are using vim as the editor in the following examples.
 Feel free to use other editors like nano instead.
 
