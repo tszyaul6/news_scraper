@@ -59,7 +59,7 @@ cd /home/ubuntu/news_scraper/backend
 Install the dependencies
 
 ```
-npm install
+npm install && npm install -D
 ```
 
 Create .env file with the following
@@ -84,7 +84,7 @@ sudo vim /home/ubuntu/news_scraper/backend/.env
 
 Change \<mongodb-atlas-url\> to your MongoDB Atlas URL.
 
-## Backend Server IP Address
+## API IP Address
 
 Modify the following file by
 
@@ -100,24 +100,16 @@ sudo systemctl restart nginx
 
 # 🌈 Start the server
 
-Start the server by PM2
-
 Goto the following directory
 
 ```
 cd /home/ubuntu/news_scraper/backend
 ```
 
-Start the server by using PM2
+Start the server by using npm
 
 ```
-sudo pm2 start ecosystem.config.js
-```
-
-If you turn off the instance, you might need to restart the nginx server
-
-```
-sudo systemctl start nginx
+npm start
 ```
 
 # 🤤 Other useful commands
