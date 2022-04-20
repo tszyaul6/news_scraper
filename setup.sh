@@ -24,7 +24,7 @@ server {
 
   # node api reverse proxy
   location /api {
-    proxy_pass http://<private-ipv4-address>:7000/news;
+    proxy_pass http://<private-ipv4-address>:8000/news;
   }
 }
 END
