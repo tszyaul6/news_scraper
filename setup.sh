@@ -37,4 +37,4 @@ sudo apt install chromium-browser
 sudo npm install -g pm2
 
 # setup pm2 to start automatically on system startup
-sudo pm2 startup systemd
+# sudo pm2 startup systemd
