@@ -111,21 +111,3 @@ Start the server by using npm
 ```
 npm start
 ```
-
-# 🤤 Other useful commands
-
-You can refer to the following command list
-
-```
-<!-- shows all pm2 running application -->
-pm2 list
-
-<!-- shows pm2 application logs -->
-pm2 logs <application-name>
-
-<!-- clear pm2 logs -->
-pm2 flush
-
-<!-- restart pm2 application -->
-pm2 restart <application-name>
-```
