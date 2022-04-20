@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const news = require("./routes/news");
 const app = express();
-const PORT = 7000;
+const PORT = process.env.PORT || 8080;
 
 // Cross-origin resource sharing for frontend server
 app.use(cors());
