@@ -1,6 +1,6 @@
 # 📚 Introduction
 
-This is our CS4296 Group Project. It is a web application that provides Hong Kong news translation services. This application is built using MERN stack and can be deployed on AWS EC2 free tier instances.
+This is a web application that provides Hong Kong news translation services. This application is built using MERN stack and can be deployed on AWS EC2 free tier instances.
 
 # 🛠 Quick Installation
 
